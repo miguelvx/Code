@@ -1,0 +1,30 @@
+""" Miguel Vasquez
+    Program #1 the DIFF tool for timestamps
+    COSC 1306
+    Fall 2019
+    This Program computes the difference in hours, minutes, and seconds between the timestamps of two files
+"""
+hour_in = input("Enter the number of hours of the first timestamp: ")
+minute_in = input("Enter the number of minutes of the first timestamp: ")
+second_in = input("Enter the number of seconds of the first timestamp: ")
+hour_out = input("Enter the number of hours of the second timestamp: ")
+minute_out = input("Enter the number of minutes of the second timestamp: ")
+second_out = input("Enter the number of seconds of the second timestamp: ")
+
+hour_in = int(hour_in) * 3600     #converting Hours/Mins/Sec into seconds and integers
+hour_out = int(hour_out) * 3600
+minute_in = int(minute_in) * 60
+minute_out = int(minute_out) * 60
+second_in = int(second_in)
+second_out = int(second_out)
+
+total_in = hour_in + minute_in + second_in
+total_out = hour_out + minute_out + second_out
+difference_of_time = total_in - total_out
+
+hour_difference = difference_of_time // 3600
+difference_of_time = difference_of_time - (hour_difference * 3600)
+minute_difference = difference_of_time // 60
+difference_of_time = difference_of_time - (minute_difference * 60)
+
+print("time between timestamps ", hour_difference , "hour(s) ", minute_difference, "minute(s) ", difference_of_time , "second(s)")
